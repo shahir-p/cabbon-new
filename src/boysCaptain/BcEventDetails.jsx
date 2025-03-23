@@ -1,5 +1,5 @@
 import React from 'react'
-import BcAppbar from './BcAppbar'
+
 import { ChevronLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import boysbg from '../assets/boysbg.png'
@@ -13,16 +13,16 @@ const BcEventDetails = ({ height, width }) => {
           };
           const handleNavigation = (item) => {
             // Navigate to BcTodayList page and pass data (e.g., item details)
-            navigate('/boyscaptain/todaylist/boys', { state: { item } });
+            navigate('/boyscaptain/eventboys', { state: { item } });
         };
           const handlefine = (item) => {
             // Navigate to BcTodayList page and pass data (e.g., item details)
-            navigate('/boyscaptain/todaylist/fine', { state: { item } });
+            navigate('/boyscaptain/eventfine', { state: { item } });
         };
     
   return (
    <>
-        <BcAppbar height={height} width={width}/>
+      
         <div className='home d-flex flex-column  ' style={{ width: `${width}px`,marginTop: `${height * 0.1 }px`, padding: "10px 20px" }}>
                 <div className='d-flex mb-3 mt-2'>
                     <ChevronLeft onClick={handleBackClick} />

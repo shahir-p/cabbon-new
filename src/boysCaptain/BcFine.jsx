@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft } from 'lucide-react';
-import BcAppbar from "./BcAppbar";
+
 
 const BcFine = ({ height, width }) => {
   const [deleteshow, setDeleteShow] = useState(false);
@@ -38,7 +38,7 @@ const BcFine = ({ height, width }) => {
 
   return (
     <>
-    <BcAppbar height={height} width={width}/>
+   
       <div
         className="home d-flex flex-column"
         style={{

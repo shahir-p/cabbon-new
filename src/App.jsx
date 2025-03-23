@@ -62,13 +62,6 @@ const App = () => {
           {/* Captain Module Routes */}
           <Route path="/manager/*" element={<Managermodule height={height} width={width}/>} />
 
-          <Route path="today" element={<BcToday height={height} width={width} />} />
-          
-          <Route path="/boyscaptain/todaylist/boys" element={<BcTodayList height={height} width={width} />} />
-          
-          <Route path="/boyscaptain/todaylist" element={<BcEventDetails height={height} width={width} />} />
-          
-          <Route path="/boyscaptain/todaylist/fine" element={<BcFine height={height} width={width} />} />
         </Routes>
    
     </Router>

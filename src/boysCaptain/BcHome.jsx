@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 import { PlusCircle } from "lucide-react";
@@ -12,7 +12,7 @@ const BcHome = ({ height, width }) => {
 
   // Handler for navigating to the "Today" page
   const handleTodayClick = () => {
-    navigate('/today');
+    navigate('/boyscaptain/events');
   };
 
 

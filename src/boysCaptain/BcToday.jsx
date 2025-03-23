@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { ChevronLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Badge from 'react-bootstrap/Badge';
-import BcAppbar from './BcAppbar';
+
 
 
 const BcToday = ({ height, width }) => {
@@ -22,14 +22,14 @@ const BcToday = ({ height, width }) => {
 
     const handleNavigation = (item) => {
         // Navigate to BcTodayList page and pass data (e.g., item details)
-        navigate('/boyscaptain/todaylist', { state: { item } });
+        navigate('/boyscaptain/eventdetails', { state: { item } });
     };
 
 
    
     return (
         <>
-         <BcAppbar height={height} width={width}/>
+         
             <div className='home d-flex flex-column  ' style={{ width: `${width}px`, marginTop: `${height * 0.1 }px`, padding: "10px 20px" }}>
                 <div className='d-flex mb-3 mt-2'>
                     <ChevronLeft onClick={handleBackClick} />
