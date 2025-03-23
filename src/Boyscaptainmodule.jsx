@@ -9,6 +9,8 @@ import BcToday from './boysCaptain/BcToday';
 import BcEventDetails from './boysCaptain/BcEventDetails';
 import BcFine from './boysCaptain/BcFine';
 import BcTodayList from './boysCaptain/BcTodayList';
+import BcPay from './boysCaptain/BcPay';
+import Bcpaymentdetails from './boysCaptain/Bcpaymentdetails';
 
 
 const Boyscaptainmodule = ({ height, width }) => {
@@ -35,6 +37,11 @@ const Boyscaptainmodule = ({ height, width }) => {
           <Route path="eventboys" element={<BcTodayList height={height} width={width} />} />
           {/* eventfine */}
           <Route path="eventfine" element={<BcFine height={height} width={width} />} />
+          {/* pay */}
+          <Route path="pay" element={<BcPay height={height} width={width} />} />
+          {/* paymentdetails */}
+          <Route path="paymentdetails" element={<Bcpaymentdetails height={height} width={width} />} />
+          
      
 
       </Routes>
