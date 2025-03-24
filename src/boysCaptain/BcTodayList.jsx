@@ -154,13 +154,9 @@ const BcTodayList = ({ height, width }) => {
               >
                 <li>Name</li>
                 <li>UID</li>
-                <li>Mobile</li>
-                <li>Email</li>
-                <li>Place</li>
-                <li>Grade</li>
-                <li>Wage</li>
-                <li>Works</li>
-                <li>Earnings</li>
+                <li>Entry</li>
+                <li>Fine</li>
+              
               </ul>
             </div>
             <div className="ms-2">
@@ -174,15 +170,11 @@ const BcTodayList = ({ height, width }) => {
                   lineHeight: "2.45",
                 }}
               >
-                <li>Name</li>
-                <li>UID</li>
-                <li>Mobile</li>
-                <li>Email</li>
-                <li>Place</li>
-                <li>Grade</li>
-                <li>Wage</li>
-                <li>Works</li>
-                <li>Earnings</li>
+                <li>: Shahir</li>
+                <li>: Shahirfayis</li>
+                <li>: 08:30 am</li>
+                <li>: Costume</li>
+               
               </ul>
             </div>
           </div>
