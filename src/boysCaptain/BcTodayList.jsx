@@ -103,7 +103,7 @@ const BcTodayList = ({ height, width }) => {
                   backgroundImage: `url(${backgroundImage})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
-                  backgroundPosition: "right",
+                  backgroundPosition: "top",
                 }}
 
               ></div>

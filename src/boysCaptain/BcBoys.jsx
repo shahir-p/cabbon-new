@@ -2,6 +2,7 @@ import { Search } from "lucide-react";
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import Carousel from 'react-bootstrap/Carousel';
 
 const BcBoys = ({ height, width }) => {
   const [deleteshow, setDeleteShow] = useState(false);
@@ -32,6 +33,11 @@ const BcBoys = ({ height, width }) => {
   };
 
   const array = Array.from({ length: 11 }, (_, i) => i);
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
 
   return (
     <>
@@ -100,7 +106,7 @@ const BcBoys = ({ height, width }) => {
                   backgroundImage: `url(${backgroundImage})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
-                  backgroundPosition: "right",
+                  backgroundPosition: "top",
                 }}
               ></div>
               <h5 className="mt-2">Name</h5>
@@ -121,27 +127,74 @@ const BcBoys = ({ height, width }) => {
           <Modal.Title>Boys Details</Modal.Title>
         </Modal.Header>
         <Modal.Body className="d-flex flex-column justify-content-center align-items-center">
-          <div
-            onClick={triggerFileInput}
-            style={{
-              height: "100px",
-              width: "100px",
-              backgroundColor: "green",
-              borderRadius: "10px",
-              border: "1px solid",
-              backgroundImage: `url(${backgroundImage})`,
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-            }}
-          ></div>
-          <input
-            type="file"
-            accept="image/*"
-            id="imageInput"
-            style={{ display: "none" }}
-            onChange={handleImageChange}
-          />
+        <div className=" d-flex justify-content-center" style={{ width: "100%" }}>
+            <Carousel
+              activeIndex={index}
+              onSelect={handleSelect}
+              data-bs-theme="dark"
+              indicators={false}
+              controls={true}
+              interval={null}
+            >
+              <Carousel.Item>
+                <div
+                  className=" d-flex justify-content-center"
+                  style={{
+                    height: "100px",
+                    width: "250px",
+                  }}
+                >
+                  <div
+                    onClick={triggerFileInput}
+                    style={{
+                      height: "100px",
+                      width: "100px",
+                      backgroundColor: "white",
+                      borderRadius: "10px",
+                      border: "1px solid",
+                      backgroundImage: `url(${backgroundImage})`,
+                      backgroundSize: "cover",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                  ></div>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    id="imageInput"
+                    style={{ display: "none" }}
+                    onChange={handleImageChange}
+                  />
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div
+                  className=" d-flex justify-content-center"
+                  style={{
+                    height: "100px",
+                    width: "250px",
+                  }}
+                >
+                  <div
+                    
+                    style={{
+                      height: "100px",
+                      width: "100px",
+                      backgroundColor: "white",
+                      borderRadius: "10px",
+                      border: "1px solid",
+                      backgroundImage: `url(https://png.pngtree.com/png-clipart/20220605/original/pngtree-black-qr-code-for-web-png-image_7964376.png)`,
+                      backgroundSize: "cover",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                  ></div>
+
+                </div>
+              </Carousel.Item>
+            </Carousel>
+
+          </div>
           <div className="d-flex mt-3">
             <div>
               <ul
@@ -264,13 +317,13 @@ const BcBoys = ({ height, width }) => {
                    
                   >
                    
-                    <option value="manager">Manager</option>
+                    <option  hidden>Select</option>
                     <option value="captain">Captain</option>
                     <option value="vicecaptain">Vice Captain</option>
                     <option value="agrade">A Grade</option>
                     <option value="bgrade">B Grade</option>
                     <option value="general">General</option>
-                    <option value="boyscaptain">Boy's Captain</option>
+                   
                   </select>
                 </li>
                 <li>
