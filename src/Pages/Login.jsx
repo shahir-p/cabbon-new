@@ -26,6 +26,8 @@ const Login = ({ height, width }) => {
       navigate('/boys'); // Redirect to the default home page
     } else if (category === 'captain' || category === 'vicecaptain') {
       navigate('/captain');
+    } else if  (category === 'manager' ) {
+      navigate('/manager');
     } else {
       document.getElementById("error").textContent = "Invalid category selected";
       setTimeout(() => {

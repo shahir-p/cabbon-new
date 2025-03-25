@@ -34,7 +34,6 @@ const BcToday = ({ height, width }) => {
                 <div className='d-flex mb-3 mt-2'>
                     <ChevronLeft onClick={handleBackClick} />
                     <h5>Events</h5></div>
-
                 <div className='list d-flex justify-content-between align-items-center mb-2 ' style={{ height: `${height * 0.08}px`, width: `${width - 40}px`, border: "1px solid", borderRadius: "10px", fontSize: "15px", padding: "0px 20px" }}  onClick={() => handleNavigation()}>
                     <span>1</span>
                     <span>10-02-2025</span>
